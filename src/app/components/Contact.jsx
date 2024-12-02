@@ -14,33 +14,50 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    try {
-      // Send form data to server (you'd implement this API route)
-      await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, phone, message }),
-      })
 
-      // Send SMS notification
-      await fetch('/api/send-sms', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          phone: '+254796097514', // Jackie's number
-          message: `New contact from ${name}. Email: ${email}, Phone: ${phone}`,
-        }),
-      })
+    // Create WhatsApp message
+    const whatsappMessage = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`
+    )
 
-      toast.success('Message sent successfully!')
-      setName('')
-      setEmail('')
-      setPhone('')
-      setMessage('')
-    } catch (error) {
-      console.error('Error submitting form:', error)
-      toast.error('Failed to send message. Please try again.')
-    }
+    // Open WhatsApp with pre-filled message
+    window.open(`https://wa.me/254796097514?text=${whatsappMessage}`, '_blank')
+
+    // Reset form
+    setName('')
+    setEmail('')
+    setPhone('')
+    setMessage('')
+
+    toast.success('Opening WhatsApp...')
+
+    // try {
+    //   // Send form data to server (you'd implement this API route)
+    //   await fetch('/api/contact', {
+    //     method: 'POST',
+    //     headers: { 'Content-Type': 'application/json' },
+    //     body: JSON.stringify({ name, email, phone, message }),
+    //   })
+
+    //   // Send SMS notification
+    //   await fetch('/api/send-sms', {
+    //     method: 'POST',
+    //     headers: { 'Content-Type': 'application/json' },
+    //     body: JSON.stringify({
+    //       phone: '+254796097514', // Jackie's number
+    //       message: `New contact from ${name}. Email: ${email}, Phone: ${phone}`,
+    //     }),
+    //   })
+
+    //   toast.success('Message sent successfully!')
+    //   setName('')
+    //   setEmail('')
+    //   setPhone('')
+    //   setMessage('')
+    // } catch (error) {
+    //   console.error('Error submitting form:', error)
+    //   toast.error('Failed to send message. Please try again.')
+    // }
   }
 
   return (
