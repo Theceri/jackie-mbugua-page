@@ -10,9 +10,9 @@ export default function Footer() {
             <p>PRO Hair Stylist and Makeup Artist</p>
           </div>
           <div className="flex space-x-4">
-            <a href="#" className="hover:text-pink-400"><Facebook /></a>
-            <a href="#" className="hover:text-pink-400"><Instagram /></a>
-            <a href="#" className="hover:text-pink-400"><Twitter /></a>
+            <a href="https://www.facebook.com/officialjackiembugua/" target="_blank" rel="noopener noreferrer" className="hover:text-pink-400"><Facebook /></a>
+            <a href="https://www.instagram.com/officialjackiembugua/" target="_blank" rel="noopener noreferrer"  className="hover:text-pink-400"><Instagram /></a>
+            {/* <a href="#" className="hover:text-pink-400"><Twitter /></a> */}
           </div>
         </div>
         <div className="mt-8 text-center">

@@ -6,17 +6,17 @@ export default function Testimonials() {
     {
       name: 'Sarah K.',
       content: 'Jackie did an amazing job on my wedding day! My hair and makeup were perfect and lasted all day.',
-      avatar: '/placeholder.svg',
+      avatar: '/client1.jpg',
     },
     {
       name: 'Emily M.',
       content: 'I always leave feeling confident and beautiful after my appointments with Jackie. Highly recommended!',
-      avatar: '/placeholder.svg',
+      avatar: '/client2.jpg',
     },
     {
       name: 'Lisa T.',
       content: "Jackie's attention to detail is incredible. She really listens to what you want and delivers every time.",
-      avatar: '/placeholder.svg',
+      avatar: '/client3.jpg',
     },
   ]
 

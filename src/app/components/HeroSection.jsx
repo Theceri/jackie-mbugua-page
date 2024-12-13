@@ -11,7 +11,7 @@ export default function HeroSection() {
     <section className="relative h-screen flex items-center overflow-hidden">
       <div style={parallaxStyle} className="absolute inset-0">
         <Image
-          src="/placeholder.svg"
+          src="https://images.pexels.com/photos/871495/pexels-photo-871495.jpeg"
           alt="Jackie Mbugua - PRO Hair Stylist and Makeup Artist"
           layout="fill"
           objectFit="cover"

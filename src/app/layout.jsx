@@ -43,7 +43,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body
+        className={inter.className}
+        style={{
+          backgroundImage: `url(https://img.freepik.com/free-vector/abstract-decorative-circular-stripes-seamless-pattern-design_1035-25453.jpg)`,
+          backgroundSize: 'cover',
+        }}
+      > {/* todo: make this work...the background is not working currently */}
         {children}
         <Toaster />
       </body>

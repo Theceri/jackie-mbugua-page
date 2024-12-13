@@ -2,12 +2,12 @@ import Image from 'next/image'
 
 export default function Gallery() {
   const images = [
-    { src: '/placeholder.svg', alt: 'Hair styling example 1' },
-    { src: '/placeholder.svg', alt: 'Makeup example 1' },
-    { src: '/placeholder.svg', alt: 'Hair styling example 2' },
-    { src: '/placeholder.svg', alt: 'Makeup example 2' },
-    { src: '/placeholder.svg', alt: 'Hair styling example 3' },
-    { src: '/placeholder.svg', alt: 'Makeup example 3' },
+    { src: 'https://images.pexels.com/photos/8468039/pexels-photo-8468039.jpeg', alt: 'Hair styling example 1' },
+    { src: '/makeup1.jpg', alt: 'Makeup example 1' },
+    { src: '/hair1.jpg', alt: 'Hair styling example 2' },
+    { src: '/makeup2.jpg', alt: 'Makeup example 2' },
+    { src: '/hair2.jpg', alt: 'Hair styling example 3' },
+    { src: '/makeup3.jpg', alt: 'Makeup example 3' },
   ]
 
   return (
